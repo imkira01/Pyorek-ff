@@ -1,1 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Up Free Fire - Toko Masashi Ryuzz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-fire"></i>
+                <h1>Toko Masashi Ryuzz</h1>
+            </div>
+            <p class="tagline">Top Up Free Fire Aman, Cepat & Terpercaya</p>
+        </header>
 
+        <div class="hero">
+            <h2>Top Up Diamond Free Fire</h2>
+            <p>Isi diamond FF dengan harga termurah dan proses instan!</p>
+            <div class="whatsapp-info">
+                <i class="fab fa-whatsapp"></i>
+                <span>Hubungi kami: +62 812-2365-4383</span>
+            </div>
+        </div>
+
+        <main>
+            <div class="user-input-section">
+                <h3><i class="fas fa-user"></i> Informasi Akun</h3>
+                <div class="form-group">
+                    <label for="playerId">Player ID Free Fire</label>
+                    <input type="text" id="playerId" placeholder="Masukkan Player ID (contoh: 1234567890)" required>
+                </div>
+                <div class="form-group">
+                    <label for="nickname">Nickname</label>
+                    <input type="text" id="nickname" placeholder="Masukkan Nickname Akun" required>
+                </div>
+                <div class="form-group">
+                    <label for="server">Server</label>
+                    <select id="server" required>
+                        <option value="" disabled selected>Pilih Server</option>
+                        <option value="global">Global (FF Advance)</option>
+                        <option value="india">India</option>
+                        <option value="indonesia">Indonesia</option>
+                        <option value="middle-east">Middle East</option>
+                        <option value="brazil">Brazil</option>
+                        <option value="thailand">Thailand</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="package-section">
+                <h3><i class="fas fa-gem"></i> Pilih Paket Diamond</h3>
+                <div class="package-container" id="packageContainer">
+                    <!-- Paket akan diisi oleh JavaScript -->
+                </div>
+            </div>
+
+            <div class="payment-section">
+                <h3><i class="fas fa-credit-card"></i> Metode Pembayaran</h3>
+                <div class="payment-methods">
+                    <div class="payment-method active" data-method="dana">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="DANA">
+                        <span>DANA</span>
+                    </div>
+                    <div class="payment-method" data-method="gopay">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/GoPay.svg" alt="GoPay">
+                        <span>GoPay</span>
+                    </div>
+                    <div class="payment-method" data-method="ovo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Logo_ovo_purple.svg" alt="OVO">
+                        <span>OVO</span>
+                    </div>
+                    <div class="payment-method" data-method="shopee">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="ShopeePay">
+                        <span>ShopeePay</span>
+                    </div>
+                    <div class="payment-method" data-method="bank">
+                        <i class="fas fa-university"></i>
+                        <span>Transfer Bank</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h3><i class="fas fa-receipt"></i> Ringkasan Pesanan</h3>
+                <div class="summary-content">
+                    <div class="summary-item">
+                        <span>Player ID:</span>
+                        <span id="summaryPlayerId">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Nickname:</span>
+                        <span id="summaryNickname">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Server:</span>
+                        <span id="summaryServer">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Paket Diamond:</span>
+                        <span id="summaryPackage">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Harga:</span>
+                        <span id="summaryPrice">Rp 0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Metode Pembayaran:</span>
+                        <span id="summaryPayment">-</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total:</span>
+                        <span id="summaryTotal">Rp 0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="resetBtn" class="btn secondary">
+                    <i class="fas fa-redo"></i> Reset Pesanan
+                </button>
+                <button id="whatsappBtn" class="btn primary">
+                    <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                </button>
+            </div>
+
+            <div class="info-section">
+                <div class="info-box">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Aman & Terpercaya</h4>
+                    <p>Proses top up aman dengan garansi 100%</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Proses Instan</h4>
+                    <p>Diamond masuk dalam 1-5 menit setelah pembayaran</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-headset"></i>
+                    <h4>Customer Service</h4>
+                    <p>Bantuan 24/7 via WhatsApp</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Toko Masashi Ryuzz - Top Up Free Fire Resmi</p>
+            <p>Hubungi kami: <strong>+62 812-2365-4383</strong> | Buka 24 Jam</p>
+            <div class="social">
+                <span>Follow kami:</span>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p class="disclaimer">Free Fire adalah merek dagang dari Garena. Toko Masashi Ryuzz adalah penyedia layanan top up independent.</p>
+        </footer>
+    </div>
+
+    <div id="whatsappModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3><i class="fab fa-whatsapp"></i> Konfirmasi Pesanan</h3>
+            <p>Anda akan diarahkan ke WhatsApp untuk menyelesaikan pesanan. Pastikan data berikut sudah benar:</p>
+            <div class="modal-summary">
+                <!-- Ringkasan akan diisi oleh JavaScript -->
+            </div>
+            <div class="modal-actions">
+                <button id="cancelModal" class="btn secondary">Periksa Kembali</button>
+                <button id="confirmWhatsApp" class="btn primary">Lanjutkan ke WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content success">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Pesanan Berhasil Dibuat!</h3>
+            <p>Silakan selesaikan pembayaran di WhatsApp untuk proses top up.</p>
+            <button id="closeSuccessModal" class="btn primary">Tutup</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+                      </html>
